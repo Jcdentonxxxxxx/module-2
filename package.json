@@ -1,0 +1,26 @@
+{
+  "name": "layoutFrontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Kuzmenko Vitaly",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "csso": "^4.0.2",
+    "eslint": "^6.6.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-beautify": "^3.0.0",
+    "gulp-load-plugins": "^2.0.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-tinypng": "^1.0.2"
+  }
+}
