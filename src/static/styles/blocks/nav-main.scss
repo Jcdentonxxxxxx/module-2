@@ -1,0 +1,226 @@
+.nav-main {
+
+    &__list {
+        display: flex;
+        justify-content: flex-start;
+
+        @media #{$tablet} {
+            width: 100%;
+
+            justify-content: space-between;
+        }
+
+        @media #{$mobile} {
+            flex-direction: column;
+            justify-content: flex-start;
+
+        }
+
+    }
+
+    &__item {
+        margin-right: 48px;
+
+        @media #{$tablet} {
+            margin-right: 0;
+        }
+
+        @media #{$mobile} {
+            flex-basis: 100%;
+            border-bottom: 1px solid rgba(136, 144, 161, 0.2);
+            padding: 0 20px;
+        }
+    }
+
+    &__link {
+        font-family: 'Graphik-Medium-Web',
+            sans-serif;
+        color: $black;
+
+
+        
+
+        @media #{$mobile} {
+            display: block;
+            height: 60px;
+            padding-top: 25px;
+            position: relative;
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                border-top: 2px solid $black;
+                border-right: 2px solid $black;
+                top: 50%;
+                right: 2px;
+                transform: translateY(-50%) rotate(135deg);
+
+            }
+
+            &.active {
+                &:after {
+                    transform: translateY(-50%) rotate(-45deg);
+                }
+            }
+
+
+
+        }
+    }
+
+    &__subitem {
+        padding-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    &__sublink {
+        font-size: 18px;
+        color: $grey;
+        line-height: 1.5;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    &__block {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        border-top: 1px solid rgba(136, 144, 161, 0.2);
+        width: 100%;
+        box-shadow: 0px 20px 40px -20px rgba(0, 0, 0, 0.2);
+        background-color: $white;
+        z-index: 1000;
+        &.active {
+            display: block;
+
+        }
+
+        @media #{$tablet} {
+            box-shadow: none;
+        }
+
+        @media #{$mobile} {
+            position: static;
+            border-top: none;
+        }
+
+
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+
+        @media #{$tablet} {
+            flex-wrap: wrap;
+        }
+
+        @media #{$mobile} {
+            flex-direction: column;
+        }
+
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+
+
+        @media #{$tablet} {
+
+
+
+            &:nth-child(1) {
+                flex-basis: 50%;
+            }
+
+            &:nth-child(2) {
+                flex-basis: 50%;
+            }
+
+            &:nth-child(3) {
+                flex-basis: 100%;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-end;
+
+                @media #{$mobile} {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        }
+
+
+
+    }
+
+    &__card {
+        background-image: linear-gradient(to top, $light-blue 140px, $white 140px);
+        width: 270px;
+        height: 185px;
+        margin-bottom: 13px;
+        position: relative;
+
+        @media #{$tablet} {
+            margin-bottom: 0;
+        }
+
+    }
+
+    &__img {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        &--right {
+            left: auto;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+
+    &__cabinet {
+        display: flex;
+        flex-direction: column;
+
+        span {
+            padding: 5px 0;
+            font-family: 'Graphik-Medium-Web',
+                sans-serif;
+            color: $black;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__footer {
+        display: none;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 50px;
+        background-color: $white;
+        z-index: 1000;
+        &.active {
+            display: block;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        @media #{$mobile} {
+            display: block;
+            position: static;
+        }
+
+
+    }
+}

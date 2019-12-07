@@ -1,0 +1,37 @@
+.header-main {
+    position: relative;
+
+    
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 23px 0 10px 0;
+    }
+
+    &__wrapper {
+        @media #{$tablet} {
+            width: 100%;
+        }
+    }
+
+    &__search {
+        @media #{$tablet} {
+            display: none;
+        }
+        
+    }
+
+    @media #{$tablet} {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+    @media #{$mobile} {
+        .container {
+            padding: 0;
+        }
+    }
+    
+}

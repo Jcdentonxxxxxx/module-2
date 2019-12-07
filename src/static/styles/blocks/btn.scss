@@ -1,0 +1,28 @@
+.btn {
+    display: inline-block;
+    width: 100%;
+    max-width: 270px;
+    font-size: 18px;
+    line-height: 30px;
+    color: $white;
+    text-decoration: none;
+    background:$blue;
+    font-family: 'Graphik-Medium-Web',
+    sans-serif;
+    
+    padding: 20px 0;
+    cursor: pointer;
+    
+    text-align: center;
+
+    &--sm {
+         max-width: 250px;
+
+         @media #{$mobile} {
+             max-width: 155px;
+             padding: 7.5px 0;
+             font-size: 12px;
+             
+         }
+    }
+}

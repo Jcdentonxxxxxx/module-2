@@ -1,0 +1,56 @@
+@import "fonts.scss";
+@import "vars.scss";
+
+body {
+    margin: 0;
+    font-family: 'GLCW-Regular',
+        sans-serif;
+    font-size: 14px;
+    color: $black;
+    
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+        list-style-type: none;
+    }
+}
+/* Vendor */
+@import "vendor/slick.scss";
+
+/* Blocks */
+@import "blocks/container.scss";
+@import "blocks/header.scss";
+@import "blocks/header-top.scss";
+@import "blocks/header-main.scss";
+@import "blocks/nav-top.scss";
+@import "blocks/nav-main.scss";
+@import "blocks/btn.scss";
+@import "blocks/nav-toggle.scss";
+@import "blocks/about-bank.scss";
+@import "blocks/nav-footer.scss";
+@import "blocks/intro.scss";

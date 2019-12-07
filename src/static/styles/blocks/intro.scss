@@ -1,0 +1,114 @@
+.intro {
+    background-color: $light-blue;
+
+    .container {
+        @media #{$mobile} {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 1300px;
+        margin: 0 auto;
+
+    }
+
+
+    &__inner {
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 590px;
+        padding-top: 105px;
+
+        @media #{$notebook} {
+            padding-top: 120px;
+        }
+
+        @media #{$tablet} {
+            height: 500px;
+            padding-top: 56px;
+        }
+
+        @media #{$mobile} {
+            height: 280px;
+            padding-top: 36px;
+        }
+    }
+
+    &__title {
+        font-family: 'GLCW-Bold',
+            sans-serif;
+        font-size: 70px;
+        line-height: 80px;
+        margin-bottom: 15px;
+        width: 740px;
+        margin-left: -0.09em;
+
+        @media #{$notebook} {
+            width: 475px;
+            font-size: 45px;
+            line-height: 50px;
+        }
+
+        @media #{$mobile} {
+            width: 212px;
+            font-size: 20px;
+            line-height: 25px;
+            margin-bottom: 4px;
+        }
+
+
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 25px;
+        color: $grey;
+        width: 481px;
+        margin-bottom: 51px;
+
+        @media #{$tablet} {
+            width: 329px;
+            margin-bottom: 95px;
+        }
+
+        @media #{$mobile} {
+            width: 244px;
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 14px;
+        }
+    }
+
+    &__photo {
+        position: absolute;
+        right: -57px;
+        bottom: 0;
+
+        @media #{$notebook} {
+            width: 389px;
+            right: 10px;
+        }
+
+        @media #{$tablet} {
+            width: 316px;
+            right: -116px;
+        }
+
+        @media #{$mobile} {
+            width: 200px;
+            right: 0;
+        }
+
+        @media #{$mobile-sm} {
+            width: 175px;
+            right: -68px;
+        }
+    }
+
+
+}
