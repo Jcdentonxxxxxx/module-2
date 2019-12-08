@@ -71,7 +71,7 @@ window.addEventListener('resize', function () {
 
 function changeTop () {
     
-    
+    var headerTop = document.querySelector('.header-top');
     var navMainFooter = document.querySelector('.nav-main__footer');
     var top = document.querySelector('.nav-main__block.active');
 
@@ -92,7 +92,7 @@ function changeTop () {
     }
     var coords = top.getBoundingClientRect();
     
-    navMainFooter.style.top = coords.top + pageYOffset + top.offsetHeight + 'px';
+    navMainFooter.style.top = coords.top + window.pageYOffset + top.offsetHeight - headerTop.offsetHeight + 'px';
 }
 
 /*Nav Toggle*/
