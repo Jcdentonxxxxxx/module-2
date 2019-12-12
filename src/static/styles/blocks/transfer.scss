@@ -1,0 +1,153 @@
+.transfer {
+    position: relative;
+    margin-bottom: 75px;
+    overflow: hidden;
+
+    @media #{$tablet} {
+        margin-bottom: 80px;
+
+        .btn.btn--sm {
+            max-width: 230px;
+        }
+    }
+
+    @media #{$tablet} {
+        margin-bottom: 50px;
+    }
+
+    @media #{$mobile} {
+        margin-bottom: 30px;
+
+        .btn.btn--sm {
+            max-width: 155px;
+        }
+    }
+
+    @media #{$mobile-sm} {
+        width: 280px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    &__item {
+        padding-left: 40px;
+        padding-top: 56px;
+        width: 100%;
+        height: 275px;
+        background-color: $lightgrey;
+        background: $lightgrey url('../img/advantages/cards.png') no-repeat;
+        background-size: 434px;
+        background-position: 96.5% -34px;
+               
+
+        @media #{$notebook} {
+            padding-left: 29px;
+            padding-top: 45px;
+            background-size: 423px;
+            background-position: 110.5% -37px;
+        }
+
+        @media #{$tablet} {
+            height: 330px;
+            background-size: 395px;
+            background-position: 145.5% 31px;
+        }
+
+        @media #{$mobile} {
+            height: 380px;
+            
+            background-position: 100% 100px;
+            padding-left: 14px;
+            padding-top: 46px;
+        }
+
+        @media #{$mobile-sm} {
+            background-size: 261px;
+            background-position: 57px 150px;
+        }
+    }
+
+    &__title {
+        font-size: 25px;
+        font-family: 'GLCW-Bold',
+            sans-serif;
+        margin-bottom: -6px;
+
+
+        @media #{$tablet} {
+            font-size: 20px;
+            line-height: 25px;
+            width: 210px;
+            margin-bottom: 15px;
+        }
+
+        @media #{$mobile} {
+            font-size: 18px;
+            width: 200px;
+            margin-bottom: -4px;
+        }
+    }
+
+    &__text {
+        width: 425px;
+        font-size: 14px;
+        line-height: 20px;
+        color: $grey;
+        margin-bottom: 24px;
+        letter-spacing: 0px;
+
+        @media #{$notebook} {
+            width: 330px;
+            margin-bottom: 16px;
+
+            .new-line {
+                display: inline;
+            }
+        }
+
+        @media #{$tablet} {
+            margin-bottom: 28px;
+
+            .new-line {
+                display: table;
+            }
+        }
+
+        @media #{$mobile} {
+            width: 252px;
+            
+        }
+
+        @media #{$mobile-sm} {
+            margin-bottom: 149px;
+        }
+
+
+    }
+
+    &__link {
+        font-family: 'Graphik-Medium-Web',
+            sans-serif;
+        color: $blue;
+    }
+
+    &__img {
+        position: absolute;
+        width: 434px;
+        right: 27px;
+        bottom: -37px;
+
+        @media #{$notebook} {
+            right: -50px;
+            width: 423px;
+            bottom: -26px;
+        }
+
+        @media #{$tablet} {
+            right: -90px;
+            width: 395px;
+            bottom: -15px;
+        }
+    }
+
+}

@@ -3,12 +3,12 @@ var headerMain = document.querySelector('.header-main');
 var media = false;
 var lastTarget;
 
-bank.addEventListener('click', function(event) {
+bank.addEventListener('click', function (event) {
     event.preventDefault();
     var body = document.querySelector('.header-top__body');
     body.classList.toggle('active');
 
-    if(body.classList.contains('active')) {
+    if (body.classList.contains('active')) {
         bank.style.color = '#003DB1';
     } else {
         bank.style.color = '';
@@ -17,11 +17,11 @@ bank.addEventListener('click', function(event) {
 
 
 
-headerMain.addEventListener('click', function(event) {
+headerMain.addEventListener('click', function (event) {
     var windowWidth = window.innerWidth;
     if (windowWidth < 1024) media = true;
     if (windowWidth > 1024) media = false;
-    
+
     if (event.target.classList.contains('nav-main__link')) {
         event.preventDefault();
         var navMainLinks = document.querySelectorAll('.nav-main__link');
@@ -30,7 +30,7 @@ headerMain.addEventListener('click', function(event) {
             navMainLinks[j].style = '';
             navMainLinks[j].classList.remove('active');
         }
-        if(lastTarget === event.target) {
+        if (lastTarget === event.target) {
             event.target.style.color = '';
             event.target.classList.remove('active');
             lastTarget = '';
@@ -39,7 +39,7 @@ headerMain.addEventListener('click', function(event) {
             event.target.classList.add('active');
             lastTarget = event.target;
         }
-        
+
 
         var parent = event.target.parentElement;
         var navMainBlock = parent.querySelector('.nav-main__block');
@@ -55,7 +55,7 @@ headerMain.addEventListener('click', function(event) {
 
         changeTop();
     };
- 
+
 });
 
 /*About Bank*/
@@ -69,8 +69,8 @@ window.addEventListener('resize', function () {
 
 
 
-function changeTop () {
-    
+function changeTop() {
+
     var headerTop = document.querySelector('.header-top');
     var navMainFooter = document.querySelector('.nav-main__footer');
     var top = document.querySelector('.nav-main__block.active');
@@ -78,51 +78,78 @@ function changeTop () {
     if (!media && !navMainFooter.classList.contains('active')) return;
 
     if (top) {
-        
+
         if (!navMainFooter.classList.contains('active')) {
             navMainFooter.classList.add('active');
         }
     } else {
-        
+
         if (navMainFooter.classList.contains('active')) {
             navMainFooter.classList.remove('active');
         }
-        
+
         return;
     }
     var coords = top.getBoundingClientRect();
-    
+
     navMainFooter.style.top = coords.top + window.pageYOffset + top.offsetHeight - headerTop.offsetHeight + 'px';
 }
 
 /*Nav Toggle*/
 
 var navToggle = document.getElementById('nav__toggle');
-navToggle.addEventListener('click', function() {
+navToggle.addEventListener('click', function () {
     var headerMain = document.querySelector('.header-main');
     headerMain.classList.toggle('active');
 });
 
 /*Bank Accordion*/
 var toggle = document.getElementById('toggle');
-toggle.addEventListener('click', function(event) {
+toggle.addEventListener('click', function (event) {
     toggle.classList.toggle('active');
 });
 
 
 /*Slider: https://kenwheeler.github.io/slick/
 ================================================*/
-$(function() {
+$(function () {
 
-    $('#introSlider').slick({
+    $('[data-slider="slick"]').slick({
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         fade: true,
         arrows: false,
         dots: true
+
     });
 
+    var sliderIsLive;
+    var slickAdvantages = $('[data-slider="slick2"]');
+
+    window.addEventListener("resize", function () {
+        if (window.innerWidth >= 767) {
+            if (!sliderIsLive) return;
+            $(slickAdvantages).slick('unslick');
+            sliderIsLive = false;
+
+        } else {
+            if (!sliderIsLive) {
+                $(slickAdvantages).slick({
+                    dots: false,
+                    infinite: false,
+                    speed: 300,
+                    slidesToShow: 1,
+                    centerMode: false,
+                    variableWidth: true,
+                    arrows: false
+                });
+                sliderIsLive = true;
+            }
+            
+        }
+    });
+
+    
+
 })
-
-
