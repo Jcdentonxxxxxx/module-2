@@ -1,3 +1,10 @@
 .new-line {
     display: table;
 }
+
+.remove-text {
+    @media #{$notebook} {
+        display: none;
+    }
+    
+}

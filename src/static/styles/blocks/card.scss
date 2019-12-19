@@ -1,0 +1,63 @@
+.card {
+    position: relative;    
+    height: 360px;
+    padding: 50px 0 0 30px;
+    color: $white;
+    overflow: hidden;
+    
+
+    &--girl {
+        background-color:$purple;
+
+        .card__img {
+            shape-outside: polygon(158px 80px, 109px 156px, 4px 167px, 109px 181px);
+        }
+        
+    }
+
+    &--man {
+        background-color: $brown;
+        
+        .card__img {
+            shape-outside: polygon(158px 80px, 122px 140px, 38px 150px, 109px 181px);
+        }
+    }
+
+    &__suptitle {        
+        font-size: 12px;
+        color: rgba($white, 0.5);
+        text-transform: uppercase;
+        margin-bottom: 47px;
+        
+    }
+
+    &__title {
+        font-family: 'GLCW-Bold',
+        sans-serif;
+        font-size: 25px;
+        line-height: 30px;
+        
+        margin-bottom: 14px;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 20px;
+        width: 330px;
+    }
+
+    &__img {
+        position: relative;
+        float: right;
+        width: 60%;
+        height: 100%;        
+        
+
+        img {
+            position: absolute;
+            bottom: 0;
+            right: -32px;
+        }
+        
+    }
+}

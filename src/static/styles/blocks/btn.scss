@@ -9,10 +9,8 @@
     background:$blue;
     font-family: 'Graphik-Medium-Web',
     sans-serif;
-    
     padding: 20px 0;
-    cursor: pointer;
-    
+    cursor: pointer;    
     text-align: center;
 
     &--sm {
@@ -25,4 +23,38 @@
              
          }
     }
+
+    &--service {
+        max-width: none;
+        background: rgba(136, 144, 161, 0.1);
+        border: 1px solid rgba(136, 144, 161, 0.2);
+        color: $grey;
+        text-align: start;
+        padding: 19px 30px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            background-color: $grey;            
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-right: 2px solid $grey;
+            border-bottom: 2px solid $grey;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+    }
 }
+

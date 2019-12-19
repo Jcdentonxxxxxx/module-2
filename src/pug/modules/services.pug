@@ -1,2 +1,108 @@
 section.services
-    
+    .container
+        h2.services__title Услуги на рынке ценных бумаг
+        .services__cards
+            .services__col
+                div(class='card card--girl')
+                    .card__img
+                        img(src="static/img/services/services-girl.png", alt="")
+                    h3(class='card__suptitle') Брокерское обслуживание
+                    h2(class='card__title') Персональное брокерское обслуживание в банке
+                    .card__text Бесплатный ввод и вывод денежных средств (российские рубли в наличной и безналичной форме)
+                    
+                a(class='btn btn--service' href='#') Подать заявку
+
+            .services__col
+                div(class='card card--man')
+                    .card__img
+                        img(src="static/img/services/services-man.png", alt="")
+                    h3(class='card__suptitle') Еврооблигации
+                    h2(class='card__title') Еврооблигации для всех. Продажа еврооблигаций
+                    .card__text Фиксированная доходность выше, чем по банковскому вкладу
+                    
+                a(class='btn btn--service' href='#') Подать заявку
+
+        .services__cards
+            div(class='services__col services__col--toggle')
+                .services__toggle
+                    img(src="static/img/svg/table/dollar.svg", alt="")
+                    a(href="") Валюта
+                    time 18.07.2019
+            div(class='services__col services__col--toggle')
+                .services__toggle
+                    img(src="static/img/svg/table/coins.svg", alt="")
+                    a(href="") Монеты 
+                        span(class='remove-text') из драгоценных металлов
+
+        .services__cards
+            .services__col                                 
+                .services__table
+                    table.currency
+                        tr.currency__head
+                            th Валюта
+                            th Период
+                            th Покупка
+                            th продажа
+                            th Цб
+                        tr
+                            td.currency__cy USD
+                            td(class='currency__graph currency__graph--usd')
+                                img(src="static/img/svg/table/currency/usd.svg", alt="")
+                            td(class='currency__buy currency__buy--negative') 64,56                                
+                            td(class='currency__sell currency__sell--positive') 65,12                                
+                            td(class='currency__cb currency__cb--positive') 64,5645                                
+                        tr
+                            td.currency__cy EUR
+                            td(class='currency__graph currency__graph--eur')
+                                img(src="static/img/svg/table/currency/eur.svg", alt="")
+                            td(class='currency__buy currency__buy--negative') 72,20                                
+                            td(class='currency__sell currency__sell--negative') 72,69                                
+                            td(class='currency__cb currency__cb--negative') 72,3422                                
+                        tr
+                            td.currency__cy GBP
+                            td(class='currency__graph currency__graph--gbp')
+                                img(src="static/img/svg/table/currency/gbp.svg", alt="")
+                            td(class='currency__buy currency__buy--positive') 84,40                                
+                            td(class='currency__sell currency__sell--positive') 85,02                                
+                            td(class='currency__cb currency__cb--positive') 85,4443                                
+                        tr
+                            td.currency__cy chf
+                            td(class='currency__graph currency__graph--chf')
+                                img(src="static/img/svg/table/currency/chf.svg", alt="")
+                            td(class='currency__buy currency__buy--negative') 59,33                                
+                            td(class='currency__sell currency__sell--negative') 60,56                                
+                            td(class='currency__cb currency__cb--positive') 59,6664                  
+
+                a(class='btn btn--service' href='#') Курсы валют в отделениях Банка
+
+            .services__col
+                .services__table
+                    table.coins
+                        tr.coins__head
+                            th вид
+                            th номинал
+                            th покупка
+                            th продажа
+                        tr
+                            td(rowspan="2" class="coins__img coins__img--gold")
+                              img(src="static/img/svg/table/coins/gold.png", alt="")  
+                            td(colspan="3" class="coins__name") Георгий Победоносец (ММД)
+                        tr.coins__values
+                            td 50
+                            td 21 500
+                            td 22 456
+                        
+                        tr
+                            td(rowspan="2" class="coins__img coins__img--silver")
+                              img(src="static/img/svg/table/coins/silver.png", alt="")  
+                            td(colspan="3" class="coins__name") Георгий Победоносец (серебро)
+                        tr.coins__values
+                            td 100
+                            td 23 565
+                            td 23 890
+                
+
+                a(class='btn btn--service' href='#') Каталог монет
+
+                        
+        

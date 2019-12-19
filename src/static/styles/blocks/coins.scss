@@ -1,0 +1,60 @@
+.coins {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 510px;
+
+    &__head {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $grey;
+        letter-spacing: 0.05em;        
+        text-align: left;
+        width: 100%;
+        max-width: 510px;
+        border-bottom: 1px solid #e7e9ec;
+
+        th {
+            font-weight: normal;
+            padding: 12px 0;
+            
+
+            &:nth-child(1) {
+                width: 27.5%;
+            }
+
+            &:nth-child(2) {
+                 width: 25.5%;
+            }
+
+            
+        }
+    }
+
+    &__name {
+        font-size: 18px;
+        line-height: 20px;
+        color: $grey;
+        vertical-align: bottom;
+        padding-top: 13px;
+    }
+
+    &__values {
+        td {
+            font-family: 'Graphik-Medium-Web',
+            sans-serif;
+            font-size: 18px;
+            
+            padding-bottom: 10px;
+        }
+    }
+
+    &__img {
+        &--gold {
+            padding-top: 29px;
+        }
+
+        &--silver {
+            padding-top: 19px;
+        }
+    }
+}

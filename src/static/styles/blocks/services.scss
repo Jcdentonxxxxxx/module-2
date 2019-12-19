@@ -1,0 +1,56 @@
+.services {
+    margin-bottom: 62px;
+
+    &__title {
+        font-size: 35px;
+        line-height: 80px;
+        font-family: 'GLCW-Bold',
+        sans-serif;
+        margin-bottom: 6px;
+    }
+
+    &__cards {
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 0 -15px;
+
+    }
+
+    &__col {
+        padding: 15px;
+        flex-basis: 50%;
+        
+        &--toggle {
+            padding-bottom: 7px;
+        }
+    }
+    
+    &__table {
+        padding: 29px;
+        height: 360px;
+        border: 1px solid rgba(136, 144, 161, 0.2);
+        border-bottom: none;
+    }
+
+    &__toggle {
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 20px;
+
+        img {
+            color: $orange;
+            margin-right: 9.5px;
+        }
+        a,time {
+            color: $orange;
+            font-size: 18px;
+            line-height: 30px;
+        }
+        
+        time {
+            color: $grey;
+            margin-left: 9px;
+        }
+        
+    }
+}

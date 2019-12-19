@@ -1,0 +1,131 @@
+.currency {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 510px;
+
+    td {
+        vertical-align: bottom;
+    }
+
+    &__head {
+
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $grey;
+        letter-spacing: 0.05em;
+        border-bottom: 1px solid rgba(136, 144, 161, 0.2);
+        text-align: left;
+        width: 100%;
+        max-width: 510px;
+
+        th {
+            font-weight: normal;
+            padding: 12px 0;
+
+            &:nth-child(1) {
+                width: 17.7%;
+            }
+
+            &:nth-child(2) {
+                width: 19.9%;
+            }
+
+            &:nth-child(3) {
+               width: 22.4%;
+            }
+
+            &:nth-child(4) {
+                width: 22.7%;
+            }  
+            
+            &:nth-child(5) {
+                width: 88px;
+            }
+        }
+    }
+
+    &__cy {
+        font-family: 'GLCW-Bold',
+            sans-serif;
+        font-size: 18px;
+        line-height: 18px;
+        text-transform: uppercase;
+        color: $grey;
+        padding-bottom: 9px;
+    }
+
+    &__graph {
+
+        &--usd {
+            padding-top: 40px;
+        }
+
+        &--eur {
+            padding-top: 19.5px;
+        }
+
+        &--gbp {
+            padding-top: 19.5px;
+        }
+
+         &--chf {
+             padding-top: 21.5px;
+         }
+    }
+
+    &__buy,
+    &__sell,
+    &__cb {
+        font-family: 'Graphik-Medium-Web',
+            sans-serif;
+        font-size: 18px;
+        line-height: 18px;
+        position: relative;
+        padding-bottom: 9px;
+
+
+        &::after {
+            position: absolute;
+            right: 39%;
+            bottom: 12px;
+            width: 10px;
+            height: 15px;
+        }
+
+        &--negative {
+            &::after {
+                content: '';
+                background-image: url('../img/svg/table/currency/fall.svg');
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+
+            }
+        }
+
+        &--positive {
+            &::after {
+                content: '';
+                background-image: url('../img/svg/table/currency/rise.svg');
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+            }
+        }
+
+    }
+
+    &__cb {
+        &::after {            
+            right: 0; 
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+}
