@@ -127,6 +127,19 @@ $(function () {
     var sliderIsLive;
     var slickAdvantages = $('[data-slider="slick2"]');
 
+    if (window.innerWidth < 767) {
+        $(slickAdvantages).slick({
+            dots: false,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 1,
+            centerMode: false,
+            variableWidth: true,
+            arrows: false
+        });
+        sliderIsLive = true;
+    }
+
     window.addEventListener("resize", function () {
         if (window.innerWidth >= 767) {
             if (!sliderIsLive) return;
