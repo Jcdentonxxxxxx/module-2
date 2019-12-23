@@ -17,13 +17,32 @@
             font-weight: normal;
             padding: 12px 0;
             
+            @media #{$notebook} {
+                padding: 15px 0;
+            }
 
             &:nth-child(1) {
                 width: 27.5%;
+
+                @media #{$notebook} {
+                    width: 26%;
+                }
             }
 
             &:nth-child(2) {
                  width: 25.5%;
+
+                 @media #{$notebook} {
+                    width: 28.5%;
+                 }
+            }
+
+            &:nth-child(3) {
+                 width: 23.5%;
+
+                 @media #{$notebook} {
+                    width: 26.5%;
+                 }
             }
 
             
@@ -49,12 +68,21 @@
     }
 
     &__img {
+
+        @media #{$notebook} {
+            width: 67px;
+        }
+
         &--gold {
-            padding-top: 29px;
+            padding-top: 29px;            
         }
 
         &--silver {
             padding-top: 19px;
+
+            @media #{$notebook} {
+                padding-top: 33px;
+            }
         }
     }
 }

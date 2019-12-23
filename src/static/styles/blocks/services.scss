@@ -35,6 +35,17 @@
                 margin-left: 0;
             }
         }
+
+        &--tables {
+            @media #{$mobile} {
+                margin-top: 21px;
+            }
+        }
+
+        @media #{$mobile} {
+             margin-right: 0;
+             margin-left: 0;
+        }
         
     }
 
@@ -87,10 +98,15 @@
         justify-content: flex-start;
         padding-top: 20px;
 
-        svg {
+        .services__svg--currency {
             margin-top: 6px;
-            margin-right: 9.5px; 
+            margin-right: 9.5px;
         }
+
+        .services__svg--coins {
+            margin-top: 1px;
+            margin-right: 11.5px;
+        } 
 
         path {
             fill: $orange;
@@ -125,7 +141,7 @@
 
         }
         
-    }
+    }    
 
     .slick-dots {        
         bottom: -36px;

@@ -22,8 +22,16 @@
             font-weight: normal;
             padding: 12px 0;
 
+            @media #{$notebook} {
+                padding: 14px 0;
+            }
+
             &:nth-child(1) {
                 width: 17.7%;
+
+                @media #{$notebook} {
+                    width: 22.7%;
+                }
             }
 
             &:nth-child(2) {
@@ -32,10 +40,14 @@
 
             &:nth-child(3) {
                width: 22.4%;
+
+               @media #{$notebook} {
+                   width: 27%;
+               }
             }
 
             &:nth-child(4) {
-                width: 22.7%;
+                width: 25.7%;
             }  
             
             &:nth-child(5) {
@@ -54,19 +66,19 @@
         padding-bottom: 9px;
 
         &--usd {
-            padding-top: 40px;
+            padding-top: 45px;
         }
 
         &--eur {
-            padding-top: 19.5px;
+            padding-top: 22.5px;
         }
 
         &--gbp {
-            padding-top: 19.5px;
+            padding-top: 23.5px;
         }
 
         &--chf {
-            padding-top: 21.5px;
+            padding-top: 22.5px;
         }
     }   
 
@@ -83,13 +95,13 @@
 
         &::after {
             position: absolute;
-            right: 39%;
+            left: 60px;
             bottom: 12px;
             width: 10px;
             height: 15px;
 
             @media #{$notebook} {
-                right: 25%;
+                left: 60px;
             }
         }
 
@@ -116,12 +128,7 @@
 
     &__cb {
         &::after {
-            right: 0;
-
-            @media #{$notebook} {
-                right: 40%;
-            }
-             
+            left: 81px;             
         }
     }
 
