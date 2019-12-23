@@ -1,63 +1,103 @@
 .card {
-    position: relative;    
+    position: relative;
     height: 360px;
     padding: 50px 0 0 30px;
     color: $white;
     overflow: hidden;
-    
 
     &--girl {
-        background-color:$purple;
+        background-color: $purple;
+            .card__img {
+                @media #{$notebook} {
+                    bottom: 3px;
+                    right: -45px;
+                    width: 207px;
+                }
+            }
+            
+            .card__text {
+                width: 330px;
 
-        .card__img {
-            shape-outside: polygon(158px 80px, 109px 156px, 4px 167px, 109px 181px);
-        }
-        
+                 @media #{$notebook} {
+                     width: 210px;
+                 }
+
+                 @media #{$tablet} {
+                     width: 280px;
+                 }
+            }
     }
 
     &--man {
-        background-color: $brown;
-        
-        .card__img {
-            shape-outside: polygon(158px 80px, 122px 140px, 38px 150px, 109px 181px);
-        }
+        background-color: $brown; 
+            .card__img {
+                @media #{$notebook} {
+                    bottom: -13px;
+                    right: -19px;
+                    width: 215px;
+                }
+            }
+            
+            .card__text {
+                width: 260px;
+
+                @media #{$notebook} {
+                    width: 233px;
+                }
+
+                @media #{$tablet} {
+                    width: 240px;
+                }
+            }
     }
 
-    &__suptitle {        
+    &__suptitle {
         font-size: 12px;
         color: rgba($white, 0.5);
         text-transform: uppercase;
-        margin-bottom: 47px;
-        
+        margin-bottom: 44px;
+        letter-spacing: 0.24px;
+
+        @media #{$notebook} {
+            margin-bottom: 43px;
+        }
+
     }
 
     &__title {
         font-family: 'GLCW-Bold',
-        sans-serif;
+            sans-serif;
         font-size: 25px;
         line-height: 30px;
-        
         margin-bottom: 14px;
+        width: 343px;
+
+        @media #{$notebook} {
+            font-size: 20px;
+            line-height: 25px;
+            margin-bottom: 10px;
+        }
     }
 
     &__text {
         font-size: 14px;
         line-height: 20px;
-        width: 330px;
+
+        
+        
     }
 
     &__img {
-        position: relative;
-        float: right;
-        width: 60%;
-        height: 100%;        
-        
+        position: absolute;
+        bottom: 0;
+        right: -32px;
+    }
 
-        img {
-            position: absolute;
-            bottom: 0;
-            right: -32px;
-        }
-        
+    @media #{$notebook} {
+        padding-left: 23px;
+    }
+
+    @media #{$tablet} {
+        padding-left: 30px;
     }
 }

@@ -113,7 +113,7 @@ toggle.addEventListener('click', function (event) {
 /*Slider: https://kenwheeler.github.io/slick/
 ================================================*/
 $(function () {
-
+    /*intro*/
     $('[data-slider="slick"]').slick({
         infinite: true,
         slidesToShow: 1,
@@ -124,18 +124,21 @@ $(function () {
 
     });
 
+    /*advantages*/
     var sliderIsLive;
     var slickAdvantages = $('[data-slider="slick2"]');
 
-    if (window.innerWidth < 767) {
+    if (window.innerWidth < 768) {
         $(slickAdvantages).slick({
             dots: false,
-            infinite: false,
+            infinite: true,
             speed: 300,
             slidesToShow: 1,
             centerMode: false,
             variableWidth: true,
             arrows: false
+
+            
         });
         sliderIsLive = true;
     }
@@ -150,7 +153,7 @@ $(function () {
             if (!sliderIsLive) {
                 $(slickAdvantages).slick({
                     dots: false,
-                    infinite: false,
+                    infinite: true,
                     speed: 300,
                     slidesToShow: 1,
                     centerMode: false,
@@ -163,6 +166,74 @@ $(function () {
         }
     });
 
-    
+    var sliderIsLiveServices;
+    var slickServices = $('[data-slider="slick3"]');
+
+    if (window.innerWidth < 1024) {
+        $(slickServices).slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            centerMode: false,
+            variableWidth: true,
+            arrows: false,
+
+            responsive: [{
+
+                breakpoint: 768,
+                settings: {
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    fade: true,
+                    arrows: false,
+                    dots: true,
+                    variableWidth: false
+                }
+
+            }]
+        });
+        sliderIsLiveServices = true;
+    }
+
+    window.addEventListener("resize", function () {
+        console.log(window.innerWidth);
+        if (window.innerWidth >= 1023) {
+            if (!sliderIsLiveServices) return;
+            $(slickServices).slick('unslick');
+            sliderIsLiveServices = false;
+
+        } else {
+            if (!sliderIsLiveServices) {
+                $(slickServices).slick({
+                    dots: false,
+                    infinite: true,
+                    speed: 300,
+                    slidesToShow: 1,
+                    centerMode: false,
+                    variableWidth: true,
+                    arrows: false,
+
+                    responsive: [{
+
+                        breakpoint: 768,
+                        settings: {
+                            infinite: true,
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                fade: true,
+                                arrows: false,
+                                dots: true,
+                                variableWidth: false
+                        }
+
+                    }]
+                });
+                sliderIsLiveServices = true;
+            }
+
+        }
+    });
 
 })

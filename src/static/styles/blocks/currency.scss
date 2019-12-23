@@ -2,7 +2,7 @@
     border-collapse: collapse;
     width: 100%;
     max-width: 510px;
-
+    
     td {
         vertical-align: bottom;
     }
@@ -52,9 +52,6 @@
         text-transform: uppercase;
         color: $grey;
         padding-bottom: 9px;
-    }
-
-    &__graph {
 
         &--usd {
             padding-top: 40px;
@@ -68,10 +65,10 @@
             padding-top: 19.5px;
         }
 
-         &--chf {
-             padding-top: 21.5px;
-         }
-    }
+        &--chf {
+            padding-top: 21.5px;
+        }
+    }   
 
     &__buy,
     &__sell,
@@ -90,6 +87,10 @@
             bottom: 12px;
             width: 10px;
             height: 15px;
+
+            @media #{$notebook} {
+                right: 25%;
+            }
         }
 
         &--negative {
@@ -114,14 +115,21 @@
     }
 
     &__cb {
-        &::after {            
-            right: 0; 
+        &::after {
+            right: 0;
+
+            @media #{$notebook} {
+                right: 40%;
+            }
+             
         }
     }
 
 
 
-
+    @media #{$tablet} {
+        margin: 0 auto;
+    }
 
 
 

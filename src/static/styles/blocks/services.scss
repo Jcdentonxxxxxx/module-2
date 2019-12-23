@@ -1,5 +1,6 @@
 .services {
     margin-bottom: 62px;
+    
 
     &__title {
         font-size: 35px;
@@ -7,6 +8,16 @@
         font-family: 'GLCW-Bold',
         sans-serif;
         margin-bottom: 6px;
+
+        @media #{$mobile} {            
+            line-height: 35px;
+        }
+
+        @media #{$mobile-sm} {
+            font-size: 20px;
+            line-height: 25px;
+            padding-right: 40px;
+        }
     }
 
     &__cards {
@@ -14,14 +25,53 @@
         flex-wrap: nowrap;
         margin: 0 -15px;
 
+        &--slider {
+            @media #{$tablet} {
+                margin-right: 0;
+            }
+
+            @media #{$mobile} {
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+        
     }
 
     &__col {
         padding: 15px;
         flex-basis: 50%;
+
+        &--slider {
+            @media #{$tablet} {
+                width: 618px;
+                cursor: move;
+            }
+
+            @media #{$mobile} {
+                width: 100%;
+                
+            }
+        }
         
         &--toggle {
             padding-bottom: 7px;
+        }
+
+        @media #{$mobile} {
+            padding: 0;
+        }
+
+        &--tables {
+            @media #{$tablet} {
+                display: none;
+                flex-basis: 100%;
+                
+            }
+
+            &.active {
+                display: block;
+            }
         }
     }
     
@@ -37,19 +87,56 @@
         justify-content: flex-start;
         padding-top: 20px;
 
-        img {
-            color: $orange;
-            margin-right: 9.5px;
+        svg {
+            margin-top: 6px;
+            margin-right: 9.5px; 
+        }
+
+        path {
+            fill: $orange;
+
+            @media #{$tablet} {
+               fill: rgba(136, 144, 161, 0.5);
+            }
         }
         a,time {
             color: $orange;
             font-size: 18px;
             line-height: 30px;
+
+            @media #{$tablet} {
+                color: rgba(136, 144, 161, 0.5);                
+            }
         }
         
         time {
             color: $grey;
             margin-left: 9px;
+        }
+
+        &.active {
+            path {
+                fill:$orange;                
+            }
+
+            a {
+                color: $orange;
+            }
+
+        }
+        
+    }
+
+    .slick-dots {        
+        bottom: -36px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .container {
+        @media #{$mobile} {
+            padding-left: 20px;
+            padding-right: 20px;
         }
         
     }

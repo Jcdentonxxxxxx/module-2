@@ -131,7 +131,7 @@
 
 }
 
-.advantages__col:nth-child(1) {
+.advantages__col--1 {
     .advantages__text {
         width: 40%;
 
@@ -154,7 +154,7 @@
     }
 }
 
-.advantages__col:nth-child(2) {
+.advantages__col--2 {
     
 
     .advantages__text {
@@ -177,7 +177,7 @@
     }
 }
 
-.advantages__col:nth-child(3) {
+.advantages__col--3 {
 
     .advantages__item {
         @media #{$tablet} {
@@ -228,7 +228,7 @@
     
 }
 
-.advantages__col:nth-child(4) {
+.advantages__col--4 {
 
     .advantages__item {
         @media #{$tablet} {

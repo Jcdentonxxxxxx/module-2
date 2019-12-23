@@ -3,8 +3,15 @@
 }
 
 .remove-text {
+    
     @media #{$notebook} {
         display: none;
     }
     
+}
+
+.remove-col {
+    @media #{$notebook} {
+        display: none;
+    }
 }
