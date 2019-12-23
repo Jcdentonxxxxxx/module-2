@@ -109,6 +109,29 @@ toggle.addEventListener('click', function (event) {
     toggle.classList.toggle('active');
 });
 
+/*Toggle services*/
+var table = document.getElementById('table');
+var lastTable = document.querySelector('.services__col--tables.active');
+table.addEventListener('click', function(event) {
+    event.preventDefault();
+    
+    if (event.target.tagName != 'A') return;
+    var id = event.target.dataset.id;    
+    var showTable = document.getElementById(id);
+
+    
+    if (showTable.classList.contains('active')) return;
+    if (lastTable === showTable) return;
+    showTable.classList.add('active');    
+    lastTable.classList.remove('active')
+
+    document.querySelector('.services__toggle.active').classList.remove('active');
+    event.target.closest('.services__toggle').classList.add('active');
+
+    lastTable = showTable;
+
+});
+
 
 /*Slider: https://kenwheeler.github.io/slick/
 ================================================*/
@@ -198,7 +221,7 @@ $(function () {
     }
 
     window.addEventListener("resize", function () {
-        console.log(window.innerWidth);
+        
         if (window.innerWidth >= 1023) {
             if (!sliderIsLiveServices) return;
             $(slickServices).slick('unslick');
