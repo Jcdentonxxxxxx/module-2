@@ -14,4 +14,12 @@
     @media #{$notebook} {
         display: none;
     }
+
+    @media #{$tablet} {
+        display: table-cell;
+    }
+
+    @media #{$mobile-sm} {
+        display: none;
+    }
 }

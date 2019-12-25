@@ -27,13 +27,17 @@
                 @media #{$notebook} {
                     width: 26%;
                 }
+
+                @media #{$mobile-sm} {
+                    width: 23%;
+                }
             }
 
             &:nth-child(2) {
                  width: 25.5%;
 
                  @media #{$notebook} {
-                    width: 28.5%;
+                    width: 28%;
                  }
             }
 
@@ -45,8 +49,18 @@
                  }
             }
 
+            @media #{$mobile-sm} {
+               padding: 9px 0;
+               padding-top: 2px;
+            }
+
             
         }
+
+         @media #{$mobile-sm} {
+             font-size: 9px;
+             line-height: 9px;
+         }
     }
 
     &__name {
@@ -55,34 +69,77 @@
         color: $grey;
         vertical-align: bottom;
         padding-top: 13px;
+
+        @media #{$notebook} {
+            line-height: 25px;
+            padding-top: 7px;
+            padding-bottom: 8px;
+        }
+
+        @media #{$mobile-sm} {
+            font-size: 14px;
+            line-height: 14px;
+        }
     }
 
     &__values {
         td {
             font-family: 'Graphik-Medium-Web',
             sans-serif;
-            font-size: 18px;
-            
+            font-size: 18px;            
             padding-bottom: 10px;
+
+            @media #{$mobile-sm} {
+                font-size: 14px;
+                line-height: 14px;
+            }
         }
     }
 
     &__img {
 
-        @media #{$notebook} {
-            width: 67px;
+        img {
+            @media #{$notebook} {
+                width: 67px;
+            }
+
+            @media #{$mobile-sm} {
+                width: 43px;
+            }
         }
+        
 
         &--gold {
-            padding-top: 29px;            
+            padding-top: 29px;
+            
+            @media #{$notebook} {
+               padding-top: 29px;
+               padding-bottom: 7px;
+            }
+
+            @media #{$mobile-sm} {
+                padding-top: 10px;
+                
+            }
         }
 
         &--silver {
             padding-top: 19px;
 
             @media #{$notebook} {
-                padding-top: 33px;
+                padding-top: 26px;
+                padding-bottom: 17px;
             }
+
+             @media #{$mobile-sm} {
+                 padding-top: 17px;
+
+             }
         }
+    }
+
+    @media #{$tablet} {
+        margin: 0 auto;
+        max-width: 530px;
     }
 }

@@ -26,16 +26,34 @@
                 padding: 14px 0;
             }
 
+            @media #{$mobile-sm} {
+                padding: 9px 0;
+                padding-top: 2px;
+            }
+
+
             &:nth-child(1) {
                 width: 17.7%;
 
                 @media #{$notebook} {
                     width: 22.7%;
                 }
+
+                @media #{$tablet} {
+                    width: 17.7%;
+                }
+
+                @media #{$mobile-sm} {
+                    width: 18.7%;
+                }
             }
 
             &:nth-child(2) {
                 width: 19.9%;
+
+                @media #{$tablet} {
+                    width: 19.5%;
+                }
             }
 
             &:nth-child(3) {
@@ -44,15 +62,42 @@
                @media #{$notebook} {
                    width: 27%;
                }
+
+               @media #{$tablet} {
+                   width: 22.5%;
+               }
+
+               @media #{$mobile-sm} {
+                   width: 29.5%;
+               }
+
+
             }
 
             &:nth-child(4) {
-                width: 25.7%;
+                width: 22.7%;
+
+                @media #{$notebook} {
+                    width: 25.7%;
+                }
+
+                @media #{$tablet} {
+                    width: 22.7%;
+                }
+
+                @media #{$mobile-sm} {
+                    width: 27.7%;
+                }
             }  
             
             &:nth-child(5) {
                 width: 88px;
             }
+        }
+
+        @media #{$mobile-sm} {
+            font-size: 9px;
+            line-height: 9px;
         }
     }
 
@@ -67,19 +112,40 @@
 
         &--usd {
             padding-top: 45px;
+
+            @media #{$mobile-sm} {
+                padding-top: 18px;
+            }
         }
 
         &--eur {
             padding-top: 22.5px;
+
+            @media #{$mobile-sm} {
+                padding-top: 7.5px;
+            }
         }
 
         &--gbp {
             padding-top: 23.5px;
+
+            @media #{$mobile-sm} {
+                padding-top: 4.5px;
+            }
         }
 
         &--chf {
             padding-top: 22.5px;
+
+            @media #{$mobile-sm} {
+                padding-top: 7.5px;
+            }
         }
+
+         @media #{$mobile-sm} {
+             font-size: 14px;
+             line-height: 15px;
+         }
     }   
 
     &__buy,
@@ -106,22 +172,45 @@
         }
 
         &--negative {
+
+             @media #{$mobile-sm} {
+                color: $orange;
+             }
+
             &::after {
                 content: '';
                 background-image: url('../img/svg/table/currency/fall.svg');
                 background-repeat: no-repeat;
                 background-position: 50% 50%;
 
+                @media #{$mobile-sm} {
+                    display: none;
+                }
+
             }
         }
 
         &--positive {
+
+             @media #{$mobile-sm} {
+                 color: $blue;
+             }
+
             &::after {
                 content: '';
                 background-image: url('../img/svg/table/currency/rise.svg');
                 background-repeat: no-repeat;
                 background-position: 50% 50%;
+
+                 @media #{$mobile-sm} {
+                     display: none;
+                 }
             }
+        }
+
+        @media #{$mobile-sm} {
+            font-size: 14px;
+            line-height: 14px;
         }
 
     }
@@ -136,6 +225,7 @@
 
     @media #{$tablet} {
         margin: 0 auto;
+        max-width: 530px;
     }
 
 

@@ -17,6 +17,7 @@
             padding-right: 0;
             margin-left: -12px;
             width: auto;
+            margin-bottom: 22px;
         }
 
         @media #{$mobile} {
@@ -25,6 +26,9 @@
             padding-right: 20px;
             margin-left: 0;
             margin-bottom: 73px;
+        }
+        @media #{$mobile-sm} {            
+            margin-bottom: 45px;
         }
     }
     

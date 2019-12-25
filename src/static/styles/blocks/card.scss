@@ -4,51 +4,79 @@
     padding: 50px 0 0 30px;
     color: $white;
     overflow: hidden;
+    background-repeat: no-repeat;
+
 
     &--girl {
         background-color: $purple;
-            .card__img {
-                @media #{$notebook} {
-                    bottom: 3px;
-                    right: -45px;
-                    width: 207px;
-                }
-            }
-            
-            .card__text {
-                width: 330px;
+        background-image: url('../img/services/services-girl.png');
+        background-position: right -34px top 0;
 
-                 @media #{$notebook} {
-                     width: 210px;
-                 }
+        @media #{$notebook} {
+            background-size: 207px;
+            background-position: right -45px top 18px;
+        }
 
-                 @media #{$tablet} {
-                     width: 280px;
-                 }
+        @media #{$tablet} {
+            background-size: 220px;
+            background-position: right -33px top -4px;
+        }
+
+        @media #{$mobile-sm} {
+            background-size: 182px;
+            background-position: right -37px top 96px;
+        }
+
+
+        .card__text {
+            width: 330px;
+
+            @media #{$notebook} {
+                width: 210px;
             }
+
+            @media #{$tablet} {
+                width: 305px;
+            }
+
+            @media #{$mobile-sm} {
+                width: 100%;
+            }
+
+        }
     }
 
     &--man {
-        background-color: $brown; 
-            .card__img {
-                @media #{$notebook} {
-                    bottom: -13px;
-                    right: -19px;
-                    width: 215px;
-                }
-            }
-            
-            .card__text {
-                width: 260px;
+        background-color: $brown;
+        background-image: url('../img/services/services-man.png');
+        background-position: right -32px top 5px;
 
-                @media #{$notebook} {
-                    width: 233px;
-                }
+        @media #{$notebook} {
+            background-size: 215px;
+            background-position: right -22px top 20px;
+        }
 
-                @media #{$tablet} {
-                    width: 240px;
-                }
+        @media #{$mobile-sm} {
+            background-size: 182px;
+            background-position: right -37px top 96px;
+        }
+
+
+        .card__text {
+            width: 260px;
+
+            @media #{$notebook} {
+                width: 233px;
             }
+
+            @media #{$tablet} {
+                width: 240px;
+            }
+
+            @media #{$mobile-sm} {
+                width: 100%;
+            }
+        }
     }
 
     &__suptitle {
@@ -60,6 +88,10 @@
 
         @media #{$notebook} {
             margin-bottom: 43px;
+        }
+
+        @media #{$mobile-sm} {
+            margin-bottom: 12px;
         }
 
     }
@@ -77,14 +109,17 @@
             line-height: 25px;
             margin-bottom: 10px;
         }
+
+        @media #{$mobile-sm} {
+            font-size: 18px;
+            width: 100%;
+            
+        }
     }
 
     &__text {
         font-size: 14px;
-        line-height: 20px;
-
-        
-        
+        line-height: 20px;        
     }
 
     &__img {
@@ -99,5 +134,9 @@
 
     @media #{$tablet} {
         padding-left: 30px;
+    }
+
+    @media #{$mobile-sm} {
+        padding-left: 20px;
     }
 }

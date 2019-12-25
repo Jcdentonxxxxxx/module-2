@@ -111,5 +111,11 @@
         }
     }
 
+    @media #{$tablet} {
+        margin-bottom: 25px;
+    }
 
+    @media #{$mobile} {
+        margin-bottom: 46px;
+    }
 }
