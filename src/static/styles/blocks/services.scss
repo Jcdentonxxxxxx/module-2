@@ -1,5 +1,6 @@
 .services {
     margin-bottom: 62px;
+    
 
     &__title {
         font-size: 35px;
@@ -7,6 +8,17 @@
         font-family: 'GLCW-Bold',
         sans-serif;
         margin-bottom: 6px;
+
+        @media #{$mobile} {            
+            line-height: 35px;
+            margin-bottom: 19px;
+        }
+
+        @media #{$mobile-sm} {
+            font-size: 20px;
+            line-height: 25px;
+            padding-right: 40px;
+        }
     }
 
     &__cards {
@@ -14,14 +26,78 @@
         flex-wrap: nowrap;
         margin: 0 -15px;
 
+        &--slider {
+            @media #{$tablet} {
+                margin-right: 0;
+            }
+
+            @media #{$mobile} {
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+
+        &--tables {
+            @media #{$mobile} {
+                margin-top: 21px;
+            }
+
+            @media #{$mobile-sm} {
+                margin-top: 18px;
+            }
+        }
+
+        @media #{$mobile} {
+             margin-right: 0;
+             margin-left: 0;
+        }
+        
     }
 
     &__col {
         padding: 15px;
         flex-basis: 50%;
+
+        &--slider {
+            @media #{$tablet} {
+                width: 618px;
+                cursor: move;
+            }
+
+            @media #{$mobile} {
+                width: 100%;
+                
+            }
+        }
         
         &--toggle {
             padding-bottom: 7px;
+
+            &:nth-child(2) {
+                .services__toggle {
+                    @media #{$mobile-sm} {
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+                }
+                
+            }
+        }
+
+        @media #{$mobile} {
+            padding: 0;
+        }
+
+        &--tables {
+            @media #{$tablet} {
+                display: none;
+                flex-basis: 100%;
+                
+            }
+
+            &.active {
+                display: block;
+            }
         }
     }
     
@@ -30,6 +106,11 @@
         height: 360px;
         border: 1px solid rgba(136, 144, 161, 0.2);
         border-bottom: none;
+
+        @media #{$mobile-sm} {
+            padding: 19px;
+            height: 190px;
+        }
     }
 
     &__toggle {
@@ -37,20 +118,84 @@
         justify-content: flex-start;
         padding-top: 20px;
 
-        img {
-            color: $orange;
+        .services__svg--currency {
+            margin-top: 6px;
             margin-right: 9.5px;
+        }
+
+        .services__svg--coins {
+            margin-top: 1px;
+            margin-right: 11.5px;
+        } 
+
+        path {
+            fill: $orange;
+
+            @media #{$tablet} {
+               fill: rgba(136, 144, 161, 0.5);
+            }
         }
         a,time {
             color: $orange;
             font-size: 18px;
             line-height: 30px;
+
+            @media #{$tablet} {
+                color: rgba(136, 144, 161, 0.5);                
+            }
+
+            @media #{$mobile-sm} {
+                font-size: 14px;
+            }
         }
         
         time {
             color: $grey;
             margin-left: 9px;
         }
+
+        &.active {
+            path {
+                fill:$orange;                
+            }
+
+            a {
+                color: $orange;
+            }
+
+        }
         
+    }    
+
+    .slick-dots {        
+        bottom: -36px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @media #{$mobile-sm} {
+            bottom: -28px;
+        }
+    }
+
+    .container {
+        @media #{$mobile} {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+    }
+
+    .btn--service {
+        @media #{$notebook} {
+            padding-left: 20px;
+        }
+
+        @media #{$mobile-sm} {
+            padding-left: 18px;
+        }
+    }
+
+    @media #{$mobile-sm} {
+        margin-bottom: 30px;
     }
 }

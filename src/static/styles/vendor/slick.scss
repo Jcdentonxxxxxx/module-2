@@ -115,7 +115,7 @@
     position: absolute;
     left: 63px;
     bottom: 93px;
-    width: 100px;
+    
     
 
     @media #{$notebook} {
@@ -141,6 +141,10 @@
                 background-color: $blue;
             }
         }
+    }
+
+    li:last-child {
+        margin-right: 0;
     }
 
     button {

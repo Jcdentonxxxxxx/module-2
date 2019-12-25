@@ -11,6 +11,25 @@
     }
 
     
+    &--slider {
+        @media #{$tablet} {
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: -12px;
+            width: auto;
+            margin-bottom: 22px;
+        }
 
+        @media #{$mobile} {
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-left: 0;
+            margin-bottom: 73px;
+        }
+        @media #{$mobile-sm} {            
+            margin-bottom: 45px;
+        }
+    }
     
 }

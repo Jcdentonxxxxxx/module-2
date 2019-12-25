@@ -1,73 +1,79 @@
 section.services
     .container
         h2.services__title Услуги на рынке ценных бумаг
-        .services__cards
-            .services__col
-                div(class='card card--girl')
-                    .card__img
-                        img(src="static/img/services/services-girl.png", alt="")
+    div(class='container container--slider')
+        div(class='services__cards services__cards--slider' data-slider='slick3')
+            div(class='services__col services__col--slider')
+                div(class='card card--girl')                    
+                    
                     h3(class='card__suptitle') Брокерское обслуживание
                     h2(class='card__title') Персональное брокерское обслуживание в банке
-                    .card__text Бесплатный ввод и вывод денежных средств (российские рубли в наличной и безналичной форме)
-                    
+                    .card__text Бесплатный ввод и вывод денежных средств (российские рубли в наличной <br> и безналичной форме)
+
                 a(class='btn btn--service' href='#') Подать заявку
 
-            .services__col
+            div(class='services__col services__col--slider')
                 div(class='card card--man')
-                    .card__img
-                        img(src="static/img/services/services-man.png", alt="")
+                    
                     h3(class='card__suptitle') Еврооблигации
                     h2(class='card__title') Еврооблигации для всех. Продажа еврооблигаций
                     .card__text Фиксированная доходность выше, чем по банковскому вкладу
                     
                 a(class='btn btn--service' href='#') Подать заявку
-
-        .services__cards
+    .container
+        div(class='services__cards' id='table')
             div(class='services__col services__col--toggle')
-                .services__toggle
-                    img(src="static/img/svg/table/dollar.svg", alt="")
-                    a(href="") Валюта
+                div(class='services__toggle active')
+
+                    <svg class="services__svg services__svg--currency" width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.4445 0H1.89505C0.839238 0 0 0.827402 0 1.86833V13.1317C0 14.1726 0.839238 15 1.89505 15H23.4174C24.4733 15 25.3125 14.1726 25.3125 13.1317V1.86833C25.3396 0.827402 24.4733 0 23.4445 0ZM4.49398 6.08541C3.73596 6.08541 3.14037 5.49822 3.14037 4.75089C3.14037 4.00356 3.73596 3.41637 4.49398 3.41637C5.25201 3.41637 5.84759 4.00356 5.84759 4.75089C5.84759 5.49822 5.25201 6.08541 4.49398 6.08541ZM16.0267 10.8096C14.1858 12.6512 11.1808 12.6512 9.31284 10.8096C7.44485 8.99466 7.44485 6.03203 9.31284 4.19039C11.1537 2.34875 14.1858 2.34875 16.0267 4.19039C17.8947 6.00534 17.8947 8.96797 16.0267 10.8096ZM20.8456 11.5836C20.0876 11.5836 19.492 10.9964 19.492 10.2491C19.492 9.50178 20.0876 8.91459 20.8456 8.91459C21.6036 8.91459 22.1992 9.50178 22.1992 10.2491C22.1992 10.9964 21.6036 11.5836 20.8456 11.5836Z" fill="#FF5D39"/>
+                        <path d="M13.6443 6.43238L13.8338 6.6459L14.3482 6.03202L14.2399 5.89857C13.9421 5.5516 13.5631 5.31138 13.1028 5.23131V4.61743H12.399V5.23131C11.668 5.33807 11.1807 5.87188 11.1807 6.56583C11.1807 7.44661 11.8304 7.71352 12.399 7.90035V9.34163C12.02 9.23487 11.7763 8.99466 11.6409 8.83451L11.4785 8.62099L10.9912 9.23487L11.0995 9.36832C11.3973 9.76868 11.8575 10.0356 12.399 10.1157V10.7295H13.1028V10.1157C14.0233 9.9822 14.3482 9.28825 14.3482 8.72775C14.3482 7.7669 13.6172 7.44661 13.0758 7.28647V6.03202C13.2923 6.11209 13.4819 6.24555 13.6443 6.43238ZM12.3719 7.04626C12.047 6.91281 11.9387 6.77935 11.9387 6.56583C11.9387 6.29893 12.1282 6.11209 12.3719 6.00533V7.04626ZM13.1028 8.14056C13.4548 8.30071 13.5631 8.46085 13.5901 8.72775C13.5901 8.88789 13.536 9.20818 13.1028 9.34163V8.14056Z" fill="#FF5D39"/>
+                    </svg>
+
+                    a(href="" data-id='currency') Валюта
                     time 18.07.2019
             div(class='services__col services__col--toggle')
-                .services__toggle
-                    img(src="static/img/svg/table/coins.svg", alt="")
-                    a(href="") Монеты 
+                div(class='services__toggle')
+                    <svg class="services__svg services__svg--coins" width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.27273 0.0346602C3.37662 0.0346602 0.207792 1.53763 0 3.42272C0.103896 4.46716 1.24675 5.20591 2 5.58802C3.32467 6.25035 5.1948 6.65794 7.27273 6.65794C7.87013 6.65794 8.44156 6.60699 8.98701 6.55604C10.3377 5.28233 12.1558 4.46716 14.1299 4.36527C14.3377 4.05958 14.4935 3.72841 14.5455 3.42272C14.1558 0.646037 9.24675 0.00918604 7.27273 0.0346602ZM14.5455 5.12949C10.5195 5.12949 7.27273 8.31376 7.27273 12.2623C7.27273 16.2108 10.5195 19.395 14.5455 19.395C18.5714 19.395 21.8182 16.2108 21.8182 12.2623C21.8182 8.31376 18.5714 5.12949 14.5455 5.12949ZM0 5.43517V6.47962C0.0779221 7.21837 0.753246 8.00806 2 8.61944C3.24675 9.23082 4.98701 9.63841 6.93506 9.68936C7.1948 8.95061 7.55844 8.2628 8.02597 7.65142C7.79221 7.65142 7.53247 7.67691 7.2987 7.67691C5.06493 7.67691 3.06493 7.24384 1.55844 6.47962C0.935065 6.1994 0.415584 5.84276 0 5.43517ZM0 8.49207V9.53652C0.0779221 10.2753 0.753246 11.065 2 11.6763C3.14286 12.2368 4.72727 12.6444 6.51948 12.7463C6.51948 12.5934 6.49351 12.4151 6.49351 12.2623C6.49351 11.7273 6.54545 11.2178 6.64935 10.7083C4.67532 10.6319 2.88312 10.1988 1.53247 9.53652C0.935065 9.23083 0.415584 8.89966 0 8.49207ZM0 11.549C0 11.9056 0 12.2623 0 12.5934C0.0779221 13.3322 0.753246 14.1219 2 14.7332C3.81818 15.5994 5.71428 15.8032 7.37662 15.8032C7.03896 15.1663 6.80519 14.4785 6.64935 13.7398C4.67532 13.6633 2.88312 13.2303 1.53247 12.5679C0.935065 12.2877 0.415584 11.9566 0 11.549ZM0 14.6059V15.8032C0 17.7647 3.24675 19.3696 7.27273 19.3696C8.41558 19.3696 9.48052 19.2422 10.4156 19.0129C9.45454 18.4525 8.62337 17.6882 7.97402 16.7967C7.74026 16.7967 7.50649 16.8221 7.27273 16.8221C5.03896 16.8221 3.03896 16.3636 1.53247 15.6248C0.935065 15.3446 0.415584 15.0135 0 14.6059Z"/>
+                    </svg>
+                    a(href="" data-id='coins') Монеты 
                         span(class='remove-text') из драгоценных металлов
-
-        .services__cards
-            .services__col                                 
+    
+        div(class='services__cards services__cards--tables')
+            div(class='services__col services__col--tables active' id='currency')                                 
                 .services__table
                     table.currency
                         tr.currency__head
                             th Валюта
-                            th Период
+                            th(class='remove-col') Период
                             th Покупка
                             th продажа
                             th Цб
                         tr
-                            td.currency__cy USD
-                            td(class='currency__graph currency__graph--usd')
+                            td(class='currency__cy currency__cy--usd') USD
+                            td(class='currency__graph remove-col')
                                 img(src="static/img/svg/table/currency/usd.svg", alt="")
                             td(class='currency__buy currency__buy--negative') 64,56                                
                             td(class='currency__sell currency__sell--positive') 65,12                                
                             td(class='currency__cb currency__cb--positive') 64,5645                                
                         tr
-                            td.currency__cy EUR
-                            td(class='currency__graph currency__graph--eur')
+                            td(class='currency__cy currency__cy--eur') EUR
+                            td(class='currency__graph remove-col')
                                 img(src="static/img/svg/table/currency/eur.svg", alt="")
                             td(class='currency__buy currency__buy--negative') 72,20                                
                             td(class='currency__sell currency__sell--negative') 72,69                                
                             td(class='currency__cb currency__cb--negative') 72,3422                                
                         tr
-                            td.currency__cy GBP
-                            td(class='currency__graph currency__graph--gbp')
+                            td(class='currency__cy currency__cy--gbp') GBP
+                            td(class='currency__graph remove-col')
                                 img(src="static/img/svg/table/currency/gbp.svg", alt="")
                             td(class='currency__buy currency__buy--positive') 84,40                                
                             td(class='currency__sell currency__sell--positive') 85,02                                
                             td(class='currency__cb currency__cb--positive') 85,4443                                
                         tr
-                            td.currency__cy chf
-                            td(class='currency__graph currency__graph--chf')
+                            td(class='currency__cy currency__cy--chf') chf
+                            td(class='currency__graph remove-col')
                                 img(src="static/img/svg/table/currency/chf.svg", alt="")
                             td(class='currency__buy currency__buy--negative') 59,33                                
                             td(class='currency__sell currency__sell--negative') 60,56                                
@@ -75,7 +81,7 @@ section.services
 
                 a(class='btn btn--service' href='#') Курсы валют в отделениях Банка
 
-            .services__col
+            div(class='services__col services__col--tables' id='coins')
                 .services__table
                     table.coins
                         tr.coins__head
@@ -86,8 +92,8 @@ section.services
                         tr
                             td(rowspan="2" class="coins__img coins__img--gold")
                               img(src="static/img/svg/table/coins/gold.png", alt="")  
-                            td(colspan="3" class="coins__name") Георгий Победоносец (ММД)
-                        tr.coins__values
+                            td(colspan="3" class="coins__name coins__name--gold") Георгий Победоносец (ММД)
+                        tr.coins__values.coins__values--gold
                             td 50
                             td 21 500
                             td 22 456
@@ -95,8 +101,8 @@ section.services
                         tr
                             td(rowspan="2" class="coins__img coins__img--silver")
                               img(src="static/img/svg/table/coins/silver.png", alt="")  
-                            td(colspan="3" class="coins__name") Георгий Победоносец (серебро)
-                        tr.coins__values
+                            td(colspan="3" class="coins__name coins__name--silver") Георгий Победоносец (серебро)
+                        tr.coins__values.coins__values--silver
                             td 100
                             td 23 565
                             td 23 890
