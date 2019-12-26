@@ -1,4 +1,6 @@
 .news {
+    margin-bottom: 145px;
+
     &__header {
         display: flex;
         justify-content: space-between;
@@ -146,5 +148,17 @@
             padding-left:20px;
             padding-right: 20px;
         }
+    }
+
+    @media #{$notebook} {
+        margin-bottom: 133px;
+    }
+
+    @media #{$tablet} {
+        margin-bottom: 68px;
+    }
+
+    @media #{$mobile-sm} {
+        margin-bottom: 40px;
     }
 }

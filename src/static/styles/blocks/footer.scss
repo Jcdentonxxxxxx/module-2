@@ -1,0 +1,132 @@
+.footer {
+    background-color: #1E1F28;
+    padding: 65px 0;
+
+    &__inner {
+        display: flex;
+        margin: 0 -15px;
+
+        @media #{$notebook} {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+
+    &__col {
+        flex-basis: 25%;
+        padding: 15px;
+
+        @media #{$notebook} {
+            flex-basis: 44.5%;
+            padding-bottom: 18px;
+        }
+
+        @media #{$tablet} {
+            flex-basis: 50%;
+            padding-bottom: 18px;
+        }
+
+        @media #{$mobile-sm} {
+            flex-basis: 100%;
+            padding-bottom: 0;
+        }
+
+        &.active {
+            .footer__title {
+                &:after {
+                    transform: translateY(-50%) rotate(-45deg);
+                    border-color: $white;
+                }
+            }
+            .footer__toggle {
+                display: block;
+            }
+        }
+    }
+
+    &__title {
+        font-family: 'Graphik-Medium-Web',
+            sans-serif;
+        font-size: 18px;
+        color: $white;
+        margin-bottom: 4px;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            display: none;
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid $grey;
+            border-right: 2px solid $grey;
+            top: 50%;
+            right: 0;
+            -webkit-transform: translateY(-50%) rotate(135deg);
+            transform: translateY(-50%) rotate(135deg);
+            
+            @media #{$mobile-sm} {
+                display: block;
+            }
+        }
+
+        @media #{$notebook} {
+            margin-bottom: 14px;
+        }
+
+        @media #{$mobile-sm} {
+            font-size: 14px;
+            cursor: pointer;
+            margin-bottom: 5px;
+            line-height: 30px;
+        }
+    }
+
+    &__toggle {
+        @media #{$mobile-sm} {
+            display: none;
+        }
+    }
+
+    &__link {
+        color: $grey;
+        display: block;
+        font-size: 14px;
+        line-height: 20px;
+        margin-left: -3px;
+        padding: 10px 45px 10px 0;
+
+        &:hover {
+            color: $white;
+        }
+
+        @media #{$notebook} {
+            margin-left: 0;
+        }
+
+        @media #{$mobile-sm} {
+            padding: 6px 45px 3px 0;
+
+        }
+    }
+
+    .container {
+        @media #{$mobile} {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    @media #{$notebook} {
+        padding: 85px 0;
+    }
+
+    @media #{$tablet} {
+        padding: 51px 0;
+    }
+
+    @media #{$mobile-sm} {
+        padding: 35px 0;
+    }
+
+}

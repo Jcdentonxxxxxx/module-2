@@ -132,6 +132,16 @@ table.addEventListener('click', function(event) {
 
 });
 
+/*Footer*/
+var footer = document.getElementById('footer');
+footer.addEventListener('click', function(event) {
+    if (!event.target.classList.contains('footer__title')) return;
+    if (window.innerWidth > 565) return;
+    var parent = event.target.closest('.footer__col');
+    
+    parent.classList.toggle('active');
+});
+
 
 /*Slider: https://kenwheeler.github.io/slick/
 ================================================*/
