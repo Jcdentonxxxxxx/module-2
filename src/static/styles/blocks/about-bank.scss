@@ -1,5 +1,5 @@
 .about-bank {
-    margin-bottom: 250px;
+    margin-bottom: 271px;
     position: relative;
 
     &__accordion {
@@ -16,6 +16,7 @@
 
             .about-bank__wrapper {
                 display: flex;
+                
             }
 
             .about-bank__title {
@@ -33,12 +34,16 @@
             border-top: none;
             height: 100%;
             padding-bottom: 0;
+            padding-top: 0;
         }
     }
 
     &__wrapper {
         display: none;
         border-bottom: 1px solid rgba(136, 144, 161, 0.2);
+        justify-content: space-between;
+        margin-top: -20px;
+        padding-bottom: 22px;
 
         @media #{$tablet} {
             position: absolute;
@@ -64,15 +69,33 @@
             padding-right: 0;
         }
 
+        &:nth-child(2) {
+            padding-left: 16px;
+
+            @media #{$mobile} {
+                padding-left: 0;
+            }
+        }
+
     }
 
     &__link {
         display: block;
-        padding: 15px 0;
+        padding: 15px 0 4px;
+        font-size: 18px;
+        color: $grey;
+
+        @media #{$mobile} {
+            font-size: 14px;
+        }
     }
 
     &__title {
         position: relative;
+        font-size: 18px;
+        line-height: 25px;
+        font-family: 'Graphik-Medium-Web',
+        sans-serif;
 
         &:after {
             content: '';
@@ -88,11 +111,12 @@
             @media #{$mobile} {
                 right: 22px;
             }
-        }
+        }        
 
         @media #{$mobile} {
-            padding: 0 20px;
-            margin-bottom: 20px;
+            padding: 18px 20px 17px 20px;
+            font-size: 14px;
+            line-height: 14px;
         }
     }
 

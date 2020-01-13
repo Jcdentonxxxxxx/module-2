@@ -190,12 +190,31 @@
             padding-left: 20px;
         }
 
+        @media #{$tablet} {
+            padding-left: 30px;
+        }
+
         @media #{$mobile-sm} {
             padding-left: 18px;
         }
     }
 
+    .btn--tables {        
+
+        @media #{$mobile-sm} {
+            padding-left: 18px;
+        }
+    }
+
+    @media #{$notebook} {
+        margin-bottom: 52px;
+    }
+
+    @media #{$tablet} {
+        margin-bottom: 37px;
+    }
+
     @media #{$mobile-sm} {
-        margin-bottom: 30px;
+        margin-bottom: 26px;
     }
 }

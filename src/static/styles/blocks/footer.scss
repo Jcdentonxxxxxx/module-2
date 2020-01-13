@@ -1,6 +1,6 @@
 .footer {
     background-color: #1E1F28;
-    padding: 65px 0;
+    padding: 65px 0 20px;
 
     &__inner {
         display: flex;
@@ -118,15 +118,15 @@
     }
 
     @media #{$notebook} {
-        padding: 85px 0;
+        padding: 85px 0 85px;
     }
 
     @media #{$tablet} {
-        padding: 51px 0;
+        padding: 51px 0 51px;
     }
 
     @media #{$mobile-sm} {
-        padding: 35px 0;
+        padding: 35px 0 35px;
     }
 
 }

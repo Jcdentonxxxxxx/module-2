@@ -37,15 +37,6 @@
             sans-serif;
         color: $black;
 
-
-        
-
-        @media #{$mobile} {
-            display: block;
-            height: 60px;
-            padding-top: 25px;
-            position: relative;
-
             &:after {
                 content: '';
                 position: absolute;
@@ -56,6 +47,12 @@
                 top: 50%;
                 right: 2px;
                 transform: translateY(-50%) rotate(135deg);
+                display: none;
+
+                @media #{$mobile} {
+                    display: block;
+                    
+                }
 
             }
 
@@ -65,23 +62,33 @@
                 }
             }
 
-
-
+        @media #{$mobile} {
+            display: block;            
+            padding-top: 18px;
+            padding-bottom: 17px;
+            position: relative;
         }
+        
     }
 
-    &__subitem {
-        padding-top: 20px;
-        margin-bottom: 10px;
-    }
+    
 
     &__sublink {
         font-size: 18px;
         color: $grey;
         line-height: 1.5;
-
+        display: block;
+        padding: 17px 0 6px;
         &:hover {
             color: $blue;
+        }
+
+        @media #{$notebook} {
+            padding: 13px 0 0;
+        }
+
+        @media #{$mobile-sm} {
+            font-size: 14px;
         }
     }
 
@@ -114,14 +121,19 @@
 
     &__wrapper {
         display: flex;
-        justify-content: space-between;
-        padding: 20px 0;
+        justify-content: flex-start;
+        padding: 20px 0 58px;
+
+         @media #{$notebook} {
+            padding: 41px 0 58px;
+         }
 
         @media #{$tablet} {
             flex-wrap: wrap;
+            padding: 12px 0 30px;
         }
 
-        @media #{$mobile} {
+        @media #{$mobile-sm} {
             flex-direction: column;
         }
 
@@ -131,8 +143,62 @@
         display: flex;
         flex-direction: column;
 
+        &:nth-child(1) {
+            width: 309px;
+            margin-right: 91px;
 
-        @media #{$tablet} {
+            @media #{$notebook} {
+                width: 300px;
+                margin-right: 10px;
+            }
+
+            @media #{$tablet} {
+                flex-basis: 50%;
+                margin-right: 0;
+            }
+
+        }
+
+        &:nth-child(2) {
+           width: 332px;
+           margin-right: auto;
+
+           @media #{$notebook} {
+               width: 299px;
+           }
+
+           @media #{$tablet} {
+               flex-basis: 50%;
+               padding-left: 15px;
+           }
+
+           @media #{$mobile} {
+               flex-basis: 50%;
+               padding-left: 0;
+           }
+        }
+
+        &:nth-child(3) {          
+            
+
+            @media #{$tablet} {
+                flex-basis: 100%;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-end;
+                margin-top: 60px;
+            }
+            @media #{$mobile} {
+                flex-direction: column;
+                align-items: center;
+            }
+            @media #{$mobile-sm} {                
+                align-items: flex-start;
+            }
+        }
+
+
+        /*@media #{$tablet} {
 
 
 
@@ -155,22 +221,41 @@
                     align-items: center;
                 }
             }
-        }
+        }*/
 
 
 
     }
 
-    &__card {
-        background-image: linear-gradient(to top, $light-blue 140px, $white 140px);
+    &__card {        
         width: 270px;
         height: 185px;
         margin-bottom: 13px;
         position: relative;
 
+        &--man {
+            background-image: linear-gradient(to top, $light-blue 140px, $white 140px);
+        }
+
+        &--build {
+            background-image: linear-gradient(to top, #CFE6E5 140px, $white 140px);
+        }
+
+        &--woman {
+            background-image: linear-gradient(to top, #e6e4cf 140px, $white 140px);
+        }
+
+        @media #{$notebook} {
+            overflow: hidden;
+            margin-top: -20px;
+            width: 277px;
+        }
+
         @media #{$tablet} {
+            
             margin-bottom: 0;
         }
+        
 
     }
 
@@ -183,6 +268,17 @@
             left: auto;
             right: 0;
             bottom: 0;
+
+            @media #{$notebook} {
+                left: auto;
+                
+                bottom: 0;
+            }
+        }
+
+        @media #{$notebook} {
+            left: 5px;
+            bottom: -13px;
         }
     }
 
@@ -197,6 +293,33 @@
                 sans-serif;
             color: $black;
             margin-bottom: 25px;
+
+            @media #{$notebook} {
+                padding: 8px 0;
+                margin-bottom: 15px;
+            }
+
+            @media #{$tablet} {
+                max-width: 150px;
+                font-size: 18px;
+                line-height: 25px;
+                padding: 4px 0;
+            }
+
+            @media #{$mobile} {
+                max-width: none;
+                font-size: 14px;
+            }
+        }
+
+        .btn {
+            @media #{$notebook} {
+                max-width: none;
+            }
+        }
+
+        @media #{$tablet} {
+            width: 277px;
         }
     }
 

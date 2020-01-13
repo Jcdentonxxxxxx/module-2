@@ -2,7 +2,7 @@
     border-bottom: 1px solid rgba(136, 144, 161, 0.2);
     position: relative;
 
-    @media #{$tablet} {
+    @media #{$mobile} {
         .container {
             padding: 0 20px;
         }
@@ -14,8 +14,17 @@
         height: 75px;
         padding: 45px 0 17px 99px;
 
+        @media #{$notebook} {            
+            padding: 42px 0 17px 86px;
+        }
+
         @media #{$tablet} {
-            padding: 0;
+            padding: 10px 0 17px 86px;
+            align-items: center;
+        }
+
+        @media #{$mobile} {
+            padding: 18px 0 17px 86px;
             align-items: center;
         }
     }
@@ -40,6 +49,14 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
+        }
+
+        @media #{$tablet} {
+            top: 8px;
+        }
+
+        @media #{$mobile} {
+            top: 18px;
         }
     }
 

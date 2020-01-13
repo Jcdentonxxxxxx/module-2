@@ -150,4 +150,16 @@
         }
     }
 
+    @media #{$notebook} {
+        margin-bottom: 80px;
+    }
+
+    @media #{$tablet} {
+        margin-bottom: 49px;
+    }
+
+    @media #{$mobile} {
+        margin-bottom: 29px;
+    }
+
 }

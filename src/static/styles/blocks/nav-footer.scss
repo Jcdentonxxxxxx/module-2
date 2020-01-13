@@ -13,22 +13,32 @@
     
 
     &__link {
+        font-size: 18px;
+        font-family: 'Graphik-Medium-Web',
+        sans-serif;
+        color: $black;
+
         &--look {
             display: none;
 
             @media #{$mobile} {
                 display: block;
+                font-size: 14px;
+                line-height: 20px;
             }
         }
 
         &--tel {
             color: $orange;
+            letter-spacing: 0.05em;
         }
 
         @media #{$mobile} {
             padding: 17px 20px;
             border-bottom: 1px solid rgba(136, 144, 161, 0.2);
-            ;
+            font-size: 14px;
         }
+
+        
     }
 }

@@ -7,9 +7,18 @@ bank.addEventListener('click', function (event) {
     event.preventDefault();
     var body = document.querySelector('.header-top__body');
     body.classList.toggle('active');
+    var navLink = document.querySelector('.nav-main__link.active');
+    var navBlock = document.querySelector('.nav-main__block.active');
 
+    
     if (body.classList.contains('active')) {
         bank.style.color = '#003DB1';
+        if (navLink) {
+            navLink.classList.remove('active');
+            navLink.style.color = '';
+            lastTarget = '';
+            navBlock.classList.remove('active');
+        }
     } else {
         bank.style.color = '';
     }
@@ -27,7 +36,7 @@ headerMain.addEventListener('click', function (event) {
         var navMainLinks = document.querySelectorAll('.nav-main__link');
 
         for (var j = 0; j < navMainLinks.length; j++) {
-            navMainLinks[j].style = '';
+            navMainLinks[j].style.color = '';
             navMainLinks[j].classList.remove('active');
         }
         if (lastTarget === event.target) {

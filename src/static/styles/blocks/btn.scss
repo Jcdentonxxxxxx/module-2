@@ -24,7 +24,8 @@
          }
     }
 
-    &--service {
+    &--service,
+    &--tables {
         max-width: none;
         background: rgba(136, 144, 161, 0.1);
         border: 1px solid rgba(136, 144, 161, 0.2);

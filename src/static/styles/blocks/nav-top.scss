@@ -9,6 +9,10 @@
         .nav-top__item {
             margin-right: 46px;
 
+            @media #{$notebook} {
+                margin-right: 18px;
+            }
+
             &:last-of-type {
                 margin-right: 0;
             }
@@ -22,6 +26,18 @@
     &__col--right {
         .nav-top__item {
             margin-left: 33px;
+
+            @media #{$notebook} {
+                margin-left: 22px;
+            }
+
+            &:nth-child(3) {
+                @media #{$tablet} {
+                    margin-left: 50px;
+                }
+                
+            }
+            
         }
 
         @media #{$tablet} {
@@ -58,6 +74,10 @@
             @media #{$tablet} {
                 display: block;
                 margin-right: 43px;
+            }
+
+            @media #{$mobile} {                
+                margin-right: 34px;
             }
         }
 

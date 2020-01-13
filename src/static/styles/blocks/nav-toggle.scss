@@ -14,7 +14,11 @@
     display: none;
         @media #{$tablet} {
             display: block;
-            top: 50%;
+            top: 44%;
+        }
+
+        @media #{$mobile} {            
+            top: 53%;
         }
     
     &:focus {
