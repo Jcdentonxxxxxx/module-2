@@ -31,14 +31,25 @@
         &--tel {
             color: $orange;
             letter-spacing: 0.05em;
+            
         }
 
         @media #{$mobile} {
             padding: 17px 20px;
             border-bottom: 1px solid rgba(136, 144, 161, 0.2);
             font-size: 14px;
+
+            &--tel {
+                border-bottom: none;
+                padding-top: 35px;
+                letter-spacing: 0.005em;
+            }
         }
 
         
+    }
+
+    @media #{$mobile} {
+        margin-bottom: 10px;
     }
 }

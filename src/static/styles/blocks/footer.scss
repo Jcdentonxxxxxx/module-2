@@ -29,6 +29,7 @@
         @media #{$mobile-sm} {
             flex-basis: 100%;
             padding-bottom: 0;
+            padding-top: 11px;
         }
 
         &.active {
@@ -126,7 +127,7 @@
     }
 
     @media #{$mobile-sm} {
-        padding: 35px 0 35px;
+        padding: 24px 0 40px;
     }
 
 }

@@ -1,34 +1,17 @@
+mixin footerCol(title, ...links)
+    .footer__col
+        .footer__title= title
+        .footer__toggle
+            each link in links
+                a(href='#' class='footer__link')= link
+
+
 footer(class='footer' id='footer')
     .container
         .footer__inner
-            .footer__col
-                .footer__title Раскрытие информации
-                .footer__toggle
-                    a(href='#' class='footer__link') Реквизиты
-                    a(href='#' class='footer__link') Раскрытие информации
-                    a(href='#' class='footer__link') Процентные ставки по вкладам физ. лиц
-                    a(href='#' class='footer__link') Список лиц, под контролем либо значительным влиянием которых находится Банк
-            .footer__col
-                .footer__title Частым клиентам
-                .footer__toggle
-                    a(href='#' class='footer__link') Банковские карты
-                    a(href='#' class='footer__link') Вклады
-                    a(href='#' class='footer__link') Тарифы
-                    a(href='#' class='footer__link') Защитные признаки банкнот Банка России
-            .footer__col
-                .footer__title Корпоративным клиентам
-                .footer__toggle
-                    a(href='#' class='footer__link') Как стать клиентом
-                    a(href='#' class='footer__link') Кредитование
-                    a(href='#' class='footer__link') Интернет-банк
-            .footer__col
-                .footer__title Услуги на РЦБ
-                .footer__toggle
-                    a(href='#' class='footer__link') Доступ на валютный рынок
-                    a(href='#' class='footer__link') Брокерское обслуживание
-                    a(href='#' class='footer__link') Открыть брокерский счет
-                    a(href='#' class='footer__link') Еврооблигации
-                    a(href='#' class='footer__link') Торговля на ММВБ
-                    a(href='#' class='footer__link') Облигации
-                    a(href='#' class='footer__link') QUIK трейдинг
-                    a(href='#' class='footer__link') Transaq
+            +footerCol('Раскрытие информации', 'Реквизиты', 'Раскрытие информации', 'Процентные ставки по вкладам физ. лиц', 'Список лиц, под контролем либо значительным влиянием которых находится Банк')
+            +footerCol('Частым клиентам', 'Банковские карты', 'Вклады', 'Тарифы', 'Защитные признаки банкнот Банка России')
+            +footerCol('Корпоративным клиентам','Как стать клиентом','Кредитование','Интернет-банк')
+            +footerCol('Услуги на РЦБ','Доступ на валютный рынок','Брокерское обслуживание','Открыть брокерский счет','Еврооблигации','Торговля на ММВБ','Облигации','QUIK трейдинг','Transaq')
+        
+        
